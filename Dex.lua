@@ -15,7 +15,9 @@ local function RandomCharacters(length)
 end
 
 local Dex = game:GetObjects("rbxassetid://9553291002")[1]
-syn.protect_gui(Dex)
+if syn then 
+  syn.protect_gui(Dex)
+end
 Dex.Name = RandomCharacters(rng:NextInteger(5, 20))
 Dex.Parent = game:GetService("CoreGui")
     
